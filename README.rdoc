@@ -1,28 +1,15 @@
-== README
+TimeService is WEB service, providing functionality to get current date and time for various timesones, and based on time.jsontest.com service.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here is the list of possible URIs:
 
-Things you may want to cover:
+```api/time``` 
+returns current date and time for Moscow timezone
 
-* Ruby version
+```api/time/[timezone]``` 
+returns current date and time for specified timezone, or error in case of invalid timezone declaration
 
-* System dependencies
+```api/time/timezones``` 
+returns the list of avaliable timezones
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```api/time/timezones/[letter]``` 
+returns the list of avaliable timezones, filtered by first letter

@@ -1,4 +1,5 @@
 TimeService::Application.routes.draw do
+  get "api/time/timezones(/:letter)", to: "api#timezones"
   get "api/time(/:timezone)", to: "api#time"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
